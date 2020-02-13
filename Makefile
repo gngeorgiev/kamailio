@@ -1,5 +1,3 @@
-SHELL += -x
-
 #
 # Root Makefile for Kamailio project
 # - forward all commands to the Makefile in the src/ subfolder
