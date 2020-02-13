@@ -1,3 +1,5 @@
+SHELL += -x
+
 # Kamailio makefile
 #
 # WARNING: requires gmake (GNU Make)
