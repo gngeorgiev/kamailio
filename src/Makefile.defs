@@ -27,7 +27,7 @@ endif # verbose
 else
 override makefile_defs=1
 export makefile_defs
-
+endif # verbose
 
 ifeq ($(quiet),verbose)
 $(info normal Makefile.defs exec)
