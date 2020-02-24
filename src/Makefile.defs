@@ -25,27 +25,6 @@ $(info Makefile.defs defs skipped)
 endif # verbose
 
 else
-
-ifeq (,$(main_makefile))
-# hack to automatically use config.mak in all the modules, without
-# changing the current module makefiles (which all include Makefile.defs):
-# if not called from the main makefile (module, lib or ut):
-# include config.mak, but if not present or incomplete (makefile_defs!=1)
-# don't export the vars)
-DEFCOREPATH = ../../src
-ifneq ("$(wildcard $(DEFCOREPATH))","")
-COREPATH?= ../../src
-else
-COREPATH?= ../..
-endif
-include $(COREPATH)/config.mak
-ifeq ($(quiet),verbose)
-$(info config.mak included)
-endif # verbose
-# config.mak should set makefile_defs if complete
-export makefile_defs
-
-else
 override makefile_defs=1
 export makefile_defs
 
