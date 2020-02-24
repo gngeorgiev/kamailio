@@ -104,6 +104,7 @@ ALLDEP=config.mak Makefile Makefile.dirs Makefile.sources Makefile.rules
 
 # try saved cfg, unless we are in the process of building it or if we're doing
 # a clean
+sleep 2s
 ifeq (,$(strip \
 	$(filter config.mak config cfg cfg-defs $(clean_targets),$(MAKECMDGOALS))))
 include config.mak
