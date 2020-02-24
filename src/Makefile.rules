@@ -17,6 +17,7 @@
 
 # check if the saved cfg corresponds with the current one
 # (if not rebuild everything)
+$(sleep 2s)
 ifeq (,$(filter $(nodep_targets),$(MAKECMDGOALS)))
 -include makecfg.lst
 # if trying  to build a lib automatically and the lib is already compiled,
